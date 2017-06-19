@@ -27,7 +27,7 @@
       // Add input handler.
       search.oninput = debounce(function () {
         // XHR for NPM search.
-        xhr(`http://npmsearch.com/query?q=name:aframe-${search.value},keywords="${search.value}"&fields=name,keywords,rating`, function () {
+        xhr(`https://npmsearch.com/query?q=name:aframe-${search.value},keywords="${search.value}"&fields=name,keywords,rating`, function () {
           var npmData = JSON.parse(this.responseText);
 
           results.innerHTML = '';
